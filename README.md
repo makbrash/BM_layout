@@ -9,7 +9,12 @@ layout/
 ├── index.html              # Homepage principale
 ├── maratona.html           # Pagina dedicata alla maratona
 ├── css/
-│   └── main.css           # Stili principali
+│   ├── main.css           # Stili legacy dell'attuale layout
+│   └── framework.css      # Nuovo framework CSS modulare
+├── docs/
+│   ├── framework-demo.html # Pagina di esempio che utilizza solo il framework
+│   ├── framework-roadmap.md # Roadmap del design system
+│   └── framework-usage.md  # Linee guida e convenzioni
 ├── js/
 │   └── main.js            # JavaScript principale
 ├── img/                   # Immagini e media
@@ -32,7 +37,7 @@ layout/
 
 Il layout utilizza le seguenti librerie esterne tramite CDN:
 
-- **Bootstrap 5.3.0** - Framework CSS
+- **Bootstrap 5.3.0** - Framework CSS (da sostituire progressivamente con `framework.css`)
 - **Font Awesome 6.5.1** - Icone
 - **AOS 2.3.4** - Animazioni
 - **Swiper 11** - Carousel
@@ -56,6 +61,13 @@ Il layout utilizza le seguenti librerie esterne tramite CDN:
 1. Aprire `index.html` nel browser per la homepage
 2. Navigare tra le pagine tramite i link di navigazione
 3. Tutte le risorse sono incluse localmente (eccetto CDN esterni)
+
+## Nuovo framework CSS
+
+- Il file `css/framework.css` introduce token, reset, primitives di layout e componenti riutilizzabili con naming coerente.
+- La documentazione e le linee guida si trovano in `docs/framework-roadmap.md` e `docs/framework-usage.md`.
+- È disponibile una pagina demo autonoma in `docs/framework-demo.html` che mostra hero, card, form e footer costruiti esclusivamente con il framework.
+- Consigliato iniziare le nuove pagine impostando `<body class="l-page" data-theme="dark">` e componendo i blocchi con classi prefissate (`c-`, `l-`, `u-`).
 
 ## Note Tecniche
 
