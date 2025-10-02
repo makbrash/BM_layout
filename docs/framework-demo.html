@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bologna Marathon UI Framework – Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/framework.css" />
+</head>
+<body class="l-page" data-theme="dark">
+  <header class="c-site-header u-layer-base">
+    <nav class="c-nav" data-variant="glass">
+      <div class="c-nav__brand">
+        <span class="c-badge" aria-hidden="true">BM</span>
+        <div>
+          <div class="c-nav__title">Bologna Marathon</div>
+          <p class="c-nav__meta">Framework demo</p>
+        </div>
+      </div>
+      <ul class="c-nav__list u-hidden lg:u-flex" aria-label="Sezioni principali">
+        <li class="c-nav__item"><a class="c-nav__link is-active" href="#hero">Home</a></li>
+        <li class="c-nav__item"><a class="c-nav__link" href="#gare">Gare</a></li>
+        <li class="c-nav__item"><a class="c-nav__link" href="#percorsi">Percorsi</a></li>
+        <li class="c-nav__item"><a class="c-nav__link" href="#iscrizioni">Iscrizioni</a></li>
+      </ul>
+      <button class="c-nav__toggle lg:u-hidden" type="button" data-nav-toggle aria-expanded="false" aria-controls="mainNavPanel">
+        <span class="u-visually-hidden">Apri il menu</span>
+        &#9776;
+      </button>
+    </nav>
+    <div class="c-nav__panel" id="mainNavPanel" hidden>
+      <div class="l-stack" data-gap="xl">
+        <ul class="c-nav__list" data-orientation="vertical">
+          <li class="c-nav__item"><a class="c-nav__link is-active" href="#hero">Home</a></li>
+          <li class="c-nav__item"><a class="c-nav__link" href="#gare">Gare</a></li>
+          <li class="c-nav__item"><a class="c-nav__link" href="#percorsi">Percorsi</a></li>
+          <li class="c-nav__item"><a class="c-nav__link" href="#iscrizioni">Iscrizioni</a></li>
+        </ul>
+        <div class="c-countdown" role="status" aria-live="polite">
+          <span class="c-countdown__value">158</span>
+          <span>giorni al via</span>
+        </div>
+        <div class="c-nav__meta">Seguici sui social @bolognamarathon</div>
+      </div>
+    </div>
+  </header>
+
+  <main id="hero" class="l-stack" data-gap="2xl">
+    <section class="c-hero" data-variant="glass">
+      <div class="l-container" data-bleed="true">
+        <div class="c-hero__inner">
+          <div class="l-stack" data-gap="lg">
+            <span class="c-hero__kicker">2 marzo 2026 · Bologna</span>
+            <span class="c-hero__badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 15H5V10h14v9Zm0-11H5V6h14v2Z" fill="currentColor" />
+              </svg>
+              iscrizioni aperte
+            </span>
+            <h1 class="c-hero__title">Thermal Bologna Marathon</h1>
+            <p class="c-hero__subtitle">
+              Un viaggio cinematografico tra i portici UNESCO e le colline dell'Appennino. Scegli il tuo passo, noi curiamo l'esperienza.
+            </p>
+            <div class="c-hero__actions">
+              <a class="c-button" data-variant="primary" href="#iscrizioni">Iscriviti ora</a>
+              <a class="c-button" data-variant="ghost" href="#percorsi">Esplora i percorsi</a>
+            </div>
+          </div>
+          <div class="l-stack" data-gap="lg">
+            <div class="c-hero__media">
+              <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=900&q=80" alt="Runner tra i portici di Bologna" />
+            </div>
+            <div class="c-hero__stats">
+              <div class="c-stat" data-emphasis="primary">
+                <span class="c-stat__value">42K</span>
+                <span class="c-stat__label">Maratona ufficiale</span>
+              </div>
+              <div class="c-stat">
+                <span class="c-stat__value">30K</span>
+                <span class="c-stat__label">Portici Experience</span>
+              </div>
+              <div class="c-stat">
+                <span class="c-stat__value">21K</span>
+                <span class="c-stat__label">Run Tune Up</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gare" class="l-region">
+      <div class="l-container">
+        <div class="c-section-title u-text-center u-mx-auto u-max-width-md">
+          <span class="c-section-title__kicker">gare 2026</span>
+          <h2 class="c-section-title__heading">Tre esperienze, un'unica energia</h2>
+          <p class="c-section-title__description">
+            Ogni distanza è progettata con servizi dedicati, pacer ufficiali e storytelling immersivo lungo il percorso.
+          </p>
+        </div>
+        <div class="l-auto-grid" style="--auto-grid-min: 260px;">
+          <article class="c-card" data-tone="brand">
+            <div class="c-card__meta">
+              <span class="c-tag" data-variant="outline">gara regina</span>
+              <span class="c-tag">42,195 KM</span>
+            </div>
+            <h3 class="c-card__title">Maratona internazionale</h3>
+            <p class="c-card__description">
+              Start in Piazza Maggiore, passaggio panoramico sui colli e finish in Piazza della Pace con tappeto luminoso.
+            </p>
+            <div class="c-card__actions">
+              <a class="c-button" data-size="sm" href="#iscrizioni">Prenota la tua wave</a>
+              <a class="c-button" data-variant="ghost" data-size="sm" href="#percorsi">Dettagli percorso</a>
+            </div>
+          </article>
+          <article class="c-card">
+            <div class="c-card__meta">
+              <span class="c-tag">30 KM</span>
+              <span class="c-tag" data-variant="outline">portici UNESCO</span>
+            </div>
+            <h3 class="c-card__title">30K Portici Experience</h3>
+            <p class="c-card__description">
+              Scorci esclusivi con installazioni luminose sotto il Portico di San Luca e ristori gourmet curati dai partner locali.
+            </p>
+            <div class="c-card__actions">
+              <a class="c-button" data-size="sm" href="#iscrizioni">Prenota la tua wave</a>
+            </div>
+          </article>
+          <article class="c-card">
+            <div class="c-card__meta">
+              <span class="c-tag">21 KM</span>
+              <span class="c-tag" data-variant="outline">training camp</span>
+            </div>
+            <h3 class="c-card__title">Run Tune Up</h3>
+            <p class="c-card__description">
+              Mezze maratone cittadine con soundtrack sincronizzata e crew motivazionale distribuita lungo il percorso urbano.
+            </p>
+            <div class="c-card__actions">
+              <a class="c-button" data-size="sm" href="#iscrizioni">Prenota la tua wave</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="percorsi" class="l-region" data-theme="inverted" data-spacing="compact">
+      <div class="l-container" data-width="narrow">
+        <div class="l-split" data-ratio="60-40">
+          <div class="l-stack" data-gap="md">
+            <div class="c-section-title">
+              <span class="c-section-title__kicker">Experience design</span>
+              <h2 class="c-section-title__heading">Percorsi narrativi</h2>
+            </div>
+            <p>
+              Ogni tratto è pensato per stimolare sensi e motivazione: proiezioni olografiche sotto il Nettuno, installazioni sonore nella Manifattura, luci dinamiche sul finish.
+            </p>
+            <ul class="u-list-reset l-stack" data-gap="sm">
+              <li class="l-cluster" data-align="center" data-justify="between">
+                <span class="c-tag">Checkpoint sensoriali</span>
+                <span class="u-text-sm u-text-muted">ogni 5 km</span>
+              </li>
+              <li class="l-cluster" data-align="center" data-justify="between">
+                <span class="c-tag">Crew motivazionale</span>
+                <span class="u-text-sm u-text-muted">oltre 120 performer</span>
+              </li>
+              <li class="l-cluster" data-align="center" data-justify="between">
+                <span class="c-tag">Ristori gourmet</span>
+                <span class="u-text-sm u-text-muted">Chef Tozzi selection</span>
+              </li>
+            </ul>
+          </div>
+          <div class="c-card" data-variant="glass">
+            <h3 class="c-card__title">Timeline evento</h3>
+            <div class="l-stack" data-gap="sm">
+              <div class="l-cluster" data-justify="between">
+                <span class="u-text-uppercase u-text-xs">Venerdì</span>
+                <span class="u-text-sm">Expo Village &amp; briefing pacer</span>
+              </div>
+              <div class="l-cluster" data-justify="between">
+                <span class="u-text-uppercase u-text-xs">Sabato</span>
+                <span class="u-text-sm">Family run · Experience tours</span>
+              </div>
+              <div class="l-cluster" data-justify="between">
+                <span class="u-text-uppercase u-text-xs">Domenica</span>
+                <span class="u-text-sm">Start 8:30 · Finish festival</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="iscrizioni" class="l-region" data-spacing="compact">
+      <div class="l-container" data-width="narrow">
+        <div class="c-section-title u-text-center">
+          <span class="c-section-title__kicker">Iscrizioni</span>
+          <h2 class="c-section-title__heading">Prenota la tua wave</h2>
+          <p class="c-section-title__description">
+            Compila il form per essere contattato dal nostro team iscrizioni. Ti proporremo la fascia oraria più adatta alla tua preparazione.
+          </p>
+        </div>
+        <form class="l-stack" data-gap="xl">
+          <div class="c-form-grid" data-columns="2">
+            <label class="c-field">
+              <span class="c-field__label">Nome</span>
+              <input class="c-input" type="text" name="firstName" autocomplete="given-name" placeholder="Luca" required />
+            </label>
+            <label class="c-field">
+              <span class="c-field__label">Cognome</span>
+              <input class="c-input" type="text" name="lastName" autocomplete="family-name" placeholder="Bianchi" required />
+            </label>
+            <label class="c-field">
+              <span class="c-field__label">Email</span>
+              <input class="c-input" type="email" name="email" autocomplete="email" placeholder="nome@esempio.com" required />
+              <span class="c-field__hint">Usa un indirizzo valido, ti invieremo la conferma qui.</span>
+            </label>
+            <label class="c-field">
+              <span class="c-field__label">Seleziona gara</span>
+              <select class="c-select" name="race" required>
+                <option value="">Scegli la distanza</option>
+                <option value="maratona">Maratona 42K</option>
+                <option value="30k">30K Portici</option>
+                <option value="run-tune-up">Run Tune Up 21K</option>
+              </select>
+            </label>
+          </div>
+          <fieldset class="c-fieldset">
+            <legend>Servizi aggiuntivi</legend>
+            <label class="c-field" data-layout="inline">
+              <input type="checkbox" class="c-input" />
+              <span>Pacchetto hospitality con hotel convenzionato</span>
+            </label>
+            <label class="c-field" data-layout="inline">
+              <input type="checkbox" class="c-input" />
+              <span>Sessione di nutrizione pre-gara</span>
+            </label>
+            <label class="c-field" data-layout="inline">
+              <input type="checkbox" class="c-input" />
+              <span>Allenamento con pacer dedicato</span>
+            </label>
+          </fieldset>
+          <div class="l-cluster" data-justify="between">
+            <span class="u-text-sm u-text-muted">Ti ricontatteremo entro 48 ore.</span>
+            <button class="c-button" data-variant="primary" type="submit">Invia richiesta</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="c-site-footer">
+    <div class="l-container">
+      <div class="c-site-footer__grid">
+        <div class="l-stack" data-gap="sm">
+          <h2 class="u-text-uppercase u-text-sm">Bologna Marathon</h2>
+          <p class="u-text-muted u-max-width-md">
+            Il progetto sportivo che celebra la città con un weekend di esperienze immersive. Framework CSS creato per essere letto e riusato da un LLM.
+          </p>
+          <div class="l-cluster" data-gap="sm">
+            <a class="c-button" data-variant="ghost" data-size="sm" href="../css/framework.css">Scarica CSS</a>
+            <a class="c-button" data-variant="glass" data-size="sm" href="framework-usage.md">Documentazione</a>
+          </div>
+        </div>
+        <div class="l-stack" data-gap="sm">
+          <h3 class="u-text-uppercase u-text-xs">Contatti</h3>
+          <ul class="u-list-reset l-stack" data-gap="2xs">
+            <li>info@bolognamarathon.run</li>
+            <li>+39 051 000000</li>
+            <li>Via Rizzoli 12, Bologna</li>
+          </ul>
+        </div>
+        <div class="l-stack" data-gap="sm">
+          <h3 class="u-text-uppercase u-text-xs">Seguici</h3>
+          <div class="l-cluster" data-gap="sm">
+            <a class="c-tag" href="#">Instagram</a>
+            <a class="c-tag" href="#">Facebook</a>
+            <a class="c-tag" href="#">YouTube</a>
+          </div>
+        </div>
+      </div>
+      <div class="c-site-footer__legal u-mt-lg">© 2024 Bologna Marathon. Tutti i diritti riservati.</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('[data-nav-toggle]');
+    const panel = document.getElementById('mainNavPanel');
+    const body = document.body;
+
+    if (toggle && panel) {
+      const links = panel.querySelectorAll('a');
+
+      const closePanel = () => {
+        panel.classList.remove('is-open');
+        panel.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+        body.removeAttribute('data-nav-open');
+      };
+
+      toggle.addEventListener('click', () => {
+        const isOpen = panel.classList.toggle('is-open');
+        panel.hidden = !isOpen;
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        body.toggleAttribute('data-nav-open', isOpen);
+      });
+
+      links.forEach((link) => link.addEventListener('click', closePanel));
+      panel.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closePanel();
+          toggle.focus();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
