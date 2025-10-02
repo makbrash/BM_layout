@@ -1,0 +1,1909 @@
+/* ===========================
+   BOLOGNA MARATHON - MAIN CSS
+   Design System & Component Library
+   =========================== */
+
+/* ==================
+   TABLE OF CONTENTS
+   ==================
+   1. CSS Variables & Design Tokens
+   2. Reset & Base Styles
+   3. Typography System
+   4. Color System
+   5. Button System
+   6. Layout System
+   7. Background System
+   8. Component Styles
+      - Splash Screen
+      - Navigation
+      - Hero Section
+      - Race Cards
+      - Race Details
+      - Footer
+   9. Utility Classes
+   10. Responsive Design
+   ================== */
+
+/* ==================
+   1. CSS VARIABLES & DESIGN TOKENS
+   ================== */
+   :root {
+    /* === BRAND COLORS === */
+    --marathon-blue: #23a8eb;
+    --portici-pink: #dc335e;
+    --runtune-green: #cbdf44;
+    --accent-cyan: #5DADE2;
+    --accent-blue: #00a8ff;
+    --hover-blue: #0080cc;
+    
+    /* === NEUTRAL COLORS === */
+    --text-primary: #ffffff;
+    --text-secondary: rgb(209 213 219);
+    --text-muted: rgb(156 163 175);
+    --text-dark: #000000;
+    
+    /* === SPECIFIC COMPONENT COLORS === */
+    --cyano: rgb(34 211 238);              /* Countdown specifico */
+    --countdown-color: rgb(34 211 238);     /* Alias per countdown */
+    
+    /* === BACKGROUND COLORS === */
+    --bg-primary: #000000;
+    --bg-glass: rgba(255,255,255,0.05);
+    --bg-glass-hover: rgba(255,255,255,0.08);
+    
+    /* === GRADIENTS === */
+    --gradient-primary: linear-gradient(45deg, var(--accent-blue), #66d9ff);
+    --gradient-button: linear-gradient(135deg, var(--accent-cyan) 0%, #4db8e8 100%);
+    --gradient-button-hover: linear-gradient(135deg, var(--hover-blue) 0%, var(--accent-cyan) 100%);
+    
+    /* === SECTION BACKGROUNDS === */
+    --section-bg-1: linear-gradient(135deg, #0b0b15 0%, #1a1a2e 100%);
+    --section-bg-2: linear-gradient(135deg, #16213e 0%, #0f1419 100%);
+    
+    /* === TYPOGRAPHY === */
+    --font-primary: 'Inter', sans-serif;
+    --font-display: 'Bebas Neue', cursive;
+    --font-accent: 'Gloss And Bloom', serif;
+    
+    /* === SPACING === */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+    
+    /* === BORDER RADIUS === */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-full: 50px;
+    
+    /* === SHADOWS === */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 20px rgba(93, 173, 226, 0.3);
+    
+    /* === TRANSITIONS === */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.6s ease;
+    
+    /* === MODERN BREAKPOINTS === */
+    --breakpoint-sm: 576px;   /* Mobile landscape */
+    --breakpoint-md: 768px;   /* Tablet portrait */
+    --breakpoint-lg: 1024px;  /* Tablet landscape / Small desktop */
+    --breakpoint-xl: 1280px;  /* Desktop */
+    --breakpoint-2xl: 1440px; /* Large desktop */
+    --breakpoint-3xl: 1920px; /* Ultra wide */
+    
+    /* === CONTAINER SIZES === */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1400px;
+    --container-3xl: 1600px;
+}
+
+/* ==================
+   2. RESET & BASE STYLES
+   ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==================
+   3. TYPOGRAPHY SYSTEM
+   ================== */
+
+/* === BASE TAG STYLES === */
+/* Stili intrinseci per i tag HTML naturali */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    /* letter-spacing: 0.05em; */
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    /* letter-spacing: 0.025em; */
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: var(--space-lg);
+}
+
+h2 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 900;
+    line-height: 0.95;
+}
+
+h3 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+}
+
+h4 {
+    /* font-size: clamp(1.5rem, 4vw, 2.5rem); */
+    line-height: normal;
+    letter-spacing: 0.1em;
+}
+
+h5 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    line-height: 1.3;
+}
+
+h6 {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    /* line-height: 1.4; */
+}
+
+p {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+/* === PARAGRAFI CONTESTUALI === */
+/* Paragrafi in sezioni hero/intro sono automaticamente piÃ¹ grandi */
+section#race-details p:first-of-type,
+section#about p:first-of-type,
+.hero-description {
+    /* font-size: clamp(1.125rem, 2.5vw, 1.5rem); */
+    /* line-height: 1.5; */
+    /* font-weight: 500; */
+}
+
+/* Paragrafi secondari in sezioni sono automaticamente piÃ¹ piccoli */
+section#about p:nth-of-type(2),
+section p.text-muted {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* === ELEMENTI SPECIFICI CON FONT DISPLAY === */
+/* Elementi che devono sempre usare il font display */
+.hero-title,
+.race-title,
+.race-distance,
+.race-number,
+.hero-badge,
+.navbar .font-bebas,
+.menu-link,
+.countdown-text {
+    font-family: var(--font-display) !important;
+    /* letter-spacing: 0.05em; */
+}
+
+/* === PSEUDO CLASSES === */
+/* Classi per simulare stili di tag su altri elementi */
+.font-mono
+ {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace!important;
+}
+
+
+.pseudo-h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-lg);
+}
+
+.pseudo-h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+}
+
+.pseudo-h3 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+}
+
+.pseudo-h4 {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+}
+
+.pseudo-h5 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+}
+
+.pseudo-h6 {
+    font-family: var(--font-display);
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+}
+
+.pseudo-p {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+}
+
+/* === VARIANTI SPECIALI === */
+/* Classi per modifiche specifiche quando necessario */
+
+.text-small {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.text-accent {
+    font-family: var(--font-accent);
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* === TEXT COLORS === */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-dark { color: var(--text-dark); }
+
+/* === GRADIENT TEXT === */
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-glow {
+    color: var(--accent-cyan);
+    text-shadow: 
+        0 0 20px rgba(93, 173, 226, 0.15),
+        0 0 40px rgba(93, 173, 226, 0.1),
+        0 0 60px rgba(93, 173, 226, 0.05);
+}
+
+/* === LEGACY SUPPORT === */
+.font-bebas {font-family: var(--font-display);/* letter-spacing: 0.05em; */}
+.accent-title { font-family: var(--font-accent); font-weight: normal; letter-spacing: 0.02em; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+.gradient-text { background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.light-glow { color: var(--accent-cyan); text-shadow: 0 0 20px rgba(93, 173, 226, 0.15), 0 0 40px rgba(93, 173, 226, 0.1), 0 0 60px rgba(93, 173, 226, 0.05); }
+
+/* === CRITICAL OVERRIDES === */
+/* Protegge elementi specifici dalle regole generiche */
+
+/* Text muted override per Bootstrap */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Countdown protection */
+.countdown-text,
+.countdown-text * {
+    color: var(--countdown-color) !important;
+}
+
+/* Menu burger protection */
+.menu-burger,
+.menu-burger span {
+    transition: all var(--transition-normal) !important;
+}
+
+/* Hero title protection */
+.hero-title {
+    background: linear-gradient(135deg, white 0%, var(--accent-cyan) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* ==================
+   4. COLOR SYSTEM
+   ================== */
+
+/* === BRAND COLOR CLASSES === */
+.color-marathon { color: var(--marathon-blue) !important; }
+.color-portici { color: var(--portici-pink) !important; }
+.color-runtune { color: var(--runtune-green) !important; }
+.color-accent { color: var(--accent-cyan) !important; }
+
+.bg-marathon { background-color: var(--marathon-blue) !important; }
+.bg-portici { background-color: var(--portici-pink) !important; }
+.bg-runtune { background-color: var(--runtune-green) !important; }
+.bg-accent { background-color: var(--accent-cyan) !important; }
+
+/* ==================
+   5. BUTTON SYSTEM
+   ================== */
+
+/* === BASE BUTTON === */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-lg);
+    border: none;
+    border-radius: var(--radius-full);
+    font-family: var(--font-primary);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* === PRIMARY BUTTONS === */
+.btn-primary {
+    background: var(--gradient-button);
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    padding: var(--space-md) var(--space-xl);
+}
+
+.btn-primary:hover {
+    background: var(--gradient-button-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+    color: var(--text-primary);
+}
+
+/* === SECONDARY BUTTONS === */
+.btn-secondary {
+    background: transparent;
+    color: var(--accent-cyan);
+    border: 2px solid var(--accent-cyan);
+    font-size: 1rem;
+}
+
+.btn-secondary:hover {
+    background: var(--accent-cyan);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+/* === COMPACT BUTTONS === */
+.btn-compact {
+    background: var(--gradient-button);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: var(--space-sm) var(--space-md);
+    width: 100%;
+}
+
+.btn-compact:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+    color: var(--text-primary);
+}
+
+/* === BRAND SPECIFIC BUTTONS === */
+.btn-marathon {
+    background: var(--marathon-blue);
+    color: var(--text-primary);
+}
+
+.btn-marathon:hover {
+    background: color-mix(in srgb, var(--marathon-blue) 80%, #000 20%);
+    color: var(--text-primary);
+}
+
+.btn-portici {
+    background: var(--portici-pink);
+    color: var(--text-primary);
+}
+
+.btn-portici:hover {
+    background: color-mix(in srgb, var(--portici-pink) 80%, #000 20%);
+    color: var(--text-primary);
+}
+
+.btn-runtune {
+    background: var(--runtune-green);
+    color: var(--text-dark);
+}
+
+.btn-runtune:hover {
+    background: color-mix(in srgb, var(--runtune-green) 80%, #000 20%);
+    color: var(--text-primary);
+}
+
+/* === LEGACY BUTTON SUPPORT === */
+.cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background: var(--gradient-button);
+    color: var(--text-primary);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    text-decoration: none;
+}
+
+.cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+    color: var(--text-primary);
+}
+
+
+.cta-horizontal:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+    color: var(--text-primary);
+}
+
+/* ==================
+   6. LAYOUT SYSTEM
+   ================== */
+
+/* === MODERN CONTAINERS === */
+.container-modern {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* === SECTION SPACING === */
+.section-spacing {
+    padding: 8rem 0;
+}
+
+.section-spacing-sm {
+    padding: var(--space-3xl) 0;
+}
+
+.section-spacing-lg {
+    padding: 12rem 0;
+}
+
+.section-spacing-xl {
+    padding: 16rem 0;
+}
+
+/* ==================
+   7. BACKGROUND SYSTEM
+   ================== */
+
+/* === ALTERNATING SECTION BACKGROUNDS === */
+/* Applica sfondi alternati alle sezioni del corpo (esclude hero e footer) */
+
+/* Prima sezione: Race Details (background 1) */
+section#race-details {
+    background: var(--section-bg-1);
+    position: relative;
+    padding: 8rem 0 !important;
+}
+
+/* Seconda sezione: About (background 2) */  
+section#about {
+    background: var(--section-bg-2);
+    position: relative;
+    padding: 8rem 0 !important;
+}
+
+/* Sistema automatico per sezioni future */
+body section:nth-of-type(odd):not(.hero-container):not(footer) {
+    background: var(--section-bg-1);
+    position: relative;
+    padding: 8rem 0 !important;
+}
+
+body section:nth-of-type(even):not(.hero-container):not(footer) {
+    background: var(--section-bg-2);
+    position: relative;
+    padding: 8rem 0 !important;
+}
+
+/* Esclusioni specifiche */
+footer {
+    background: unset !important;
+}
+
+/* === GLASS EFFECT === */
+.glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.glass:hover {
+    background: var(--bg-glass-hover);
+    border-color: rgba(255,255,255,0.2);
+}
+
+/* ==================
+   8. COMPONENT STYLES
+   ================== */
+
+/* === SPLASH SCREEN === */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 50%, #000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.6s ease-out;
+}
+
+.splash-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.splash-logo {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.4s ease-out;
+}
+
+.splash-logo.fade-out {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.splash-logo svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+.splash-logo::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(93, 173, 226, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    animation: pulse 1.5s ease-in-out infinite;
+    transition: opacity 0.4s ease-out;
+}
+
+.splash-logo.fade-out::before {
+    opacity: 0;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.3; }
+    50% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(0.9); opacity: 0.3; }
+}
+
+.splash-logo-animation {
+    animation: logoReveal 0.8s ease-out forwards;
+}
+
+@keyframes logoReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==================
+   NAVIGATION
+   ================== */
+.main-header {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.nav-link-desktop {
+    color: rgba(255,255,255,0.7) !important;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0 !important;
+}
+
+.nav-link-desktop:hover,
+.nav-link-desktop.active {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.nav-link-desktop::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-cyan);
+    transition: width 0.3s ease;
+}
+
+.nav-link-desktop:hover::after,
+.nav-link-desktop.active::after {
+    width: 100%;
+}
+
+/* ==================
+   MENU BURGER COMPONENT
+   ================== */
+.menu-burger {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: var(--space-lg);
+    z-index: 1000;
+    position: relative;
+}
+
+.menu-burger span {
+    width: 100%;
+    height: 3px;
+    background: var(--text-primary) !important;
+    transition: all var(--transition-normal) !important;
+    transform-origin: center;
+    border-radius: 3px;
+    display: block !important;
+}
+
+/* Animazioni del menu burger */
+.menu-burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px) !important;
+}
+
+.menu-burger.active span:nth-child(2) {
+    opacity: 0 !important;
+    transform: scale(0) !important;
+}
+
+.menu-burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px) !important;
+}
+
+/* Assicura che il burger sia visibile e funzionante */
+.menu-burger:hover span {
+    background: var(--accent-cyan) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+/* ==================
+   MENU OVERLAY
+   ================== */
+.menu-overlay {
+    background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(26,26,46,0.95) 50%, rgba(22,33,62,0.95) 100%);
+    backdrop-filter: blur(20px);
+}
+
+.menu-link {
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    color: white !important;
+    transform: scale(1.1) !important;
+    text-decoration: none;
+}
+
+/* ==================
+   COUNTDOWN COMPONENT
+   ================== */
+.countdown-text {
+    font-family: 'Courier New', monospace!important;
+    color: var(--countdown-color) !important;
+    font-size: 0.75rem;
+}
+
+/* Specifici selettori per elementi countdown */
+#countdown-desktop,
+#countdown-mobile {
+    font-family: 'Courier New', monospace;
+}
+
+#countdown-days-desktop,
+#countdown-hours-desktop,
+#countdown-minutes-desktop,
+#countdown-seconds-desktop,
+#countdown-days-mobile,
+#countdown-hours-mobile,
+#countdown-minutes-mobile,
+#countdown-seconds-mobile {
+    color: var(--countdown-color) !important;
+}
+
+/* ==================
+   HERO SECTION
+   ================== */
+.hero-container {
+    background: linear-gradient(135deg, #000 0%, #1a1a2e 50%, #16213e 100%);
+    position: relative;
+}
+
+.hero-content {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.hero-content-inner {
+    text-align: center;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.hero-badge {
+    background: rgba(93, 173, 226, 0.2);
+    border: 1px solid rgba(93, 173, 226, 0.3);
+    color: var(--accent-cyan);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, white 0%, var(--accent-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--marathon-blue);
+    margin-bottom: 1rem;
+    offset-rotate: 11;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    /* opacity: 0.8; */
+    margin-bottom: 2rem;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==================
+   CTA BUTTONS
+   ================== */
+.cta-primary {
+    background: linear-gradient(135deg, var(--accent-cyan) 0%, #4db8e8 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(93, 173, 226, 0.3);
+    color: white;
+}
+
+.cta-horizontal {
+    background: linear-gradient(135deg, var(--accent-cyan), #4db8e8);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.825rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    /* width: 100%; */
+}
+
+.cta-horizontal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(93, 173, 226, 0.4);
+    color: white;
+}
+
+/* ==================
+   RACE CARDS
+   ================== */
+.hero-races {
+    padding: 6rem 2rem 2rem 0;
+}
+
+.race-card-mini {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-height: 400px;
+}
+
+/* Card più piccole per 5km e Kids */
+.race-card-mini.cityrun,
+.race-card-mini.kids {
+    min-height: 200px;
+}
+
+.race-card-mini.cityrun .race-content,
+.race-card-mini.kids .race-content {
+    padding: 1.5rem;
+}
+
+.race-card-mini.cityrun .race-number,
+.race-card-mini.kids .race-number {
+    font-size: 6rem;
+}
+
+.race-card-mini.cityrun .race-title,
+.race-card-mini.kids .race-title {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.race-card-mini.cityrun .race-distance,
+.race-card-mini.kids .race-distance {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.race-card-mini.cityrun .race-description,
+.race-card-mini.kids .race-description {
+    font-size: rem;
+    margin-bottom: 1rem;
+}
+
+.race-card-mini.cityrun .race-features,
+.race-card-mini.kids .race-features {
+    margin-bottom: 1rem;
+}
+
+.race-card-mini.cityrun .feature-item,
+.race-card-mini.kids .feature-item {
+    margin-bottom: 0.5rem;
+}
+
+.race-card-mini.cityrun .feature-item span,
+.race-card-mini.kids .feature-item span {
+    font-size: rem;
+}
+
+.race-card-mini.cityrun .cta-horizontal,
+.race-card-mini.kids .cta-horizontal {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.race-card-mini::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    transition: all 0.3s ease;
+}
+
+.race-card-mini.marathon::after {
+    background: var(--marathon-blue);
+}
+
+.race-card-mini.portici::after {
+    background: var(--portici-pink);
+}
+
+.race-card-mini.runtune::after {
+    background: var(--runtune-green);
+}
+
+.race-card-mini.cityrun::after {
+    background: #28a745;
+}
+
+.race-card-mini.kids::after {
+    background: #fd7e14;
+}
+
+.race-card-mini:hover {
+    transform: translateX(8px);
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.2);
+}
+
+/* ==================
+   RACE SLIDES
+   ================== */
+.slide {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.race-slide {
+    position: relative;
+}
+
+.race-slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgb(0 0 0 / 69%) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 0;
+    border-radius: 16px;
+}
+
+/* Sfondi specifici per le gare */
+.marathon-slide {
+    background-image: url('../imagebm26/maratona1.png');
+}
+
+.portici-slide {
+    background-image: url('../imagebm26/portico2.png');
+}
+
+.runtune-slide {
+    background-image: url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+}
+
+.cityrun-slide {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.kids-slide {
+    background: linear-gradient(135deg, #ff6b00 0%, #ff7807 100%);
+}
+
+.race-content {
+    z-index: 2;
+    position: relative;
+    text-align: left;
+    padding: 3rem;
+    width: 100%;
+}
+
+.race-number {
+    font-size: 12rem;
+    font-weight: 900;
+    line-height: 0.8;
+    opacity: 0.2;
+    position: absolute;
+    top: 0rem;
+    right: -1rem;
+    z-index: 0;
+}
+
+.race-category {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    margin-bottom: 1rem;
+    float: right;
+}
+
+.race-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    line-height: 0.9;
+    color: white;
+}
+
+.race-distance {
+    font-size: 2.5rem;
+    font-weight: 700;
+    opacity: 0.9;
+    line-height: normal;
+    margin: 0;
+}
+
+.race-description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    max-width: 831px;
+}
+
+.race-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+    max-width: 441px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+}
+
+.feature-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+/* ==================
+   RACE DETAILS SECTION
+   ================== */
+
+/* Highlighted card animation */
+.race-details-card.highlighted {
+    animation: cardHighlight 3s ease-in-out;
+    border-color: var(--accent-cyan) !important;
+    box-shadow: 0 0 30px rgba(93, 173, 226, 0.5) !important;
+}
+
+@keyframes cardHighlight {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 0 30px rgba(93, 173, 226, 0.5);
+    }
+    25% {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 40px rgba(93, 173, 226, 0.7);
+    }
+    75% {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 35px rgba(93, 173, 226, 0.6);
+    }
+}
+.race-details-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.race-details-card {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.race-details-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.race-details-header {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.race-details-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+}
+
+.race-details-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.race-details-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.race-details-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+.race-details-distance {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.race-details-info {
+    padding: 2rem;
+}
+
+.race-details-description {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.race-details-specs {
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* gap: 1.5rem; */
+    margin-bottom: 2rem;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.spec-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.spec-content h4 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.spec-content p {
+    opacity: 0.7;
+    font-size: 0.875rem;
+}
+
+/* Marathon specific colors */
+.race-details-card.marathon .race-details-badge {
+    background: rgba(35,168,235,0.2);
+    border: 1px solid var(--marathon-blue);
+    color: var(--marathon-blue);
+}
+
+.race-details-card.marathon .race-details-distance {
+    color: var(--marathon-blue);
+}
+
+.race-details-card.marathon .spec-icon {
+    background: rgba(35,168,235,0.2);
+    color: var(--marathon-blue);
+}
+
+/* Portici specific colors */
+.race-details-card.portici .race-details-badge {
+    background: rgba(220,51,94,0.2);
+    border: 1px solid var(--portici-pink);
+    color: var(--portici-pink);
+}
+
+.race-details-card.portici .race-details-distance {
+    color: var(--portici-pink);
+}
+
+.race-details-card.portici .spec-icon {
+    background: rgba(220,51,94,0.2);
+    color: var(--portici-pink);
+}
+
+/* Run Tune Up specific colors */
+.race-details-card.runtune .race-details-badge {
+    background: rgba(203,223,68,0.2);
+    border: 1px solid var(--runtune-green);
+    color: var(--runtune-green);
+}
+
+.race-details-card.runtune .race-details-distance {
+    color: var(--runtune-green);
+}
+
+.race-details-card.runtune .spec-icon {
+    background: rgba(203,223,68,0.2);
+    color: var(--runtune-green);
+}
+
+/* === PARALLAX EFFECTS === */
+/* IMPORTANT: Solo per elementi nella hero section */
+.hero-container .parallax-element {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Rimuovi parallax da tutti gli altri elementi */
+.parallax-element:not(.hero-container .parallax-element) {
+    transform: none !important;
+    transition: none !important;
+}
+
+/* ==================
+   9. UTILITY CLASSES
+   ================== */
+
+/* === SPACING UTILITIES === */
+.m-0 { margin: 0; }
+.mt-auto { margin-top: auto; }
+.mb-auto { margin-bottom: auto; }
+.p-0 { padding: 0; }
+
+.gap-xs { gap: var(--space-xs); }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+
+/* === DISPLAY UTILITIES === */
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+.d-block { display: block; }
+.d-none { display: none; }
+
+/* === FLEX UTILITIES === */
+.flex-center { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+.flex-between { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+.flex-column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+
+/* === POSITION UTILITIES === */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+
+/* === TRANSFORM UTILITIES === */
+.hover-lift:hover { transform: translateY(-5px); }
+.hover-scale:hover { transform: scale(1.05); }
+
+/* === BORDER RADIUS UTILITIES === */
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* === SHADOW UTILITIES === */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-glow { box-shadow: var(--shadow-glow); }
+
+/* === ABOUT SECTION === */
+#about {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==================
+   FOOTER STYLES
+   ================== */
+footer {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%) !important;
+    border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.hover-link {
+    transition: all 0.3s ease;
+}
+
+.hover-link:hover {
+    color: var(--accent-cyan) !important;
+    transform: translateX(5px);
+}
+
+.hover-social {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.hover-social:hover {
+    color: var(--accent-cyan) !important;
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* ==================
+   SPONSOR SECTION
+   ================== */
+
+.sponsor-section {
+    background: var(--section-bg-2);
+    padding: var(--space-3xl) 0;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.sponsor-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(35, 168, 235, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.sponsor-title {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sponsor-title h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.sponsor-title .light-glow {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sponsor-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Swiper Container */
+.sponsor-swiper-container {
+    position: relative;
+    z-index: 2;
+    margin: var(--space-xl) 0;
+    width: 100%;
+}
+
+.sponsor-swiper {
+    padding: var(--space-lg) 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: none;
+}
+
+/* Swiper wrapper normale - senza interferenze */
+
+/* Modalità centrata quando le slide rientrano nello schermo */
+.sponsor-swiper--centered .swiper-wrapper {
+    margin: 0 auto !important;
+    width: fit-content !important;
+    justify-content: center;
+}
+
+.sponsor-swiper--centered {
+    pointer-events: none; /* Disabilita interazioni quando centrato */
+}
+
+.sponsor-swiper--centered .sponsor-slide {
+    pointer-events: auto; /* Ma mantiene attivi i singoli link */
+}
+
+.sponsor-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 160px;
+    min-width: 140px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    padding: 12px;
+}
+
+.sponsor-slide:hover {
+    transform: translateY(-5px);
+    background: var(--bg-glass-hover);
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-glow);
+}
+
+.sponsor-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    filter: brightness(0.95) contrast(1.05);
+    transition: all var(--transition-normal);
+}
+
+.sponsor-slide:hover img {
+    filter: brightness(1) contrast(1.2);
+    transform: scale(1.05);
+}
+
+.sponsor-name {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    opacity: 0;
+    transition: all var(--transition-normal);
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 4px 8px;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+}
+
+.sponsor-slide:hover .sponsor-name {
+    opacity: 1;
+    bottom: -25px;
+}
+
+/* Row Labels */
+.sponsor-row-label {
+    text-align: center;
+    margin-bottom: var(--space-md);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sponsor-row-label::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+/* Nascondi navigazione e paginazione */
+.sponsor-swiper .swiper-button-next,
+.sponsor-swiper .swiper-button-prev,
+.sponsor-swiper .swiper-pagination {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .sponsor-slide {
+        height: 110px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sponsor-slide {
+        height: 100px;
+        width: 140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .sponsor-slide {
+        height: 90px;
+        width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsor-section {
+        padding: var(--space-2xl) 0;
+    }
+    
+    .sponsor-slide {
+        height: 80px;
+        width: 120px;
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sponsor-slide {
+        height: 70px;
+        width: 100px;
+        min-width: 90px;
+    }
+    
+    .sponsor-name {
+        font-size: 0.7rem;
+        bottom: -20px;
+    }
+    
+    .sponsor-slide:hover .sponsor-name {
+        bottom: -18px;
+    }
+}
+
+/* ==================
+   10. RESPONSIVE DESIGN
+   ================== */
+
+/* === MODERN CONTAINER QUERIES === */
+@container (max-width: 768px) {
+    .race-details-specs {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === MOBILE FIRST APPROACH === */
+
+/* === SMALL MOBILE (320px+) === */
+@media (min-width: 320px) {
+    .container-modern {
+        max-width: 100%;
+        padding: 0 var(--space-sm);
+    }
+}
+
+/* === MOBILE LANDSCAPE (576px+) === */
+@media (min-width: 576px) {
+    .container-modern {
+        max-width: var(--container-sm);
+        padding: 0 var(--space-md);
+    }
+    
+    .race-details-content,
+    .race-details-info {
+        padding: var(--space-lg);
+    }
+}
+
+/* === TABLET PORTRAIT (768px+) === */
+@media (min-width: 768px) {
+    .container-modern {
+        max-width: var(--container-md);
+    }
+    
+    .hero-content,
+    .hero-races {
+        width: 50%;
+    }
+    
+    .race-content {
+        padding: var(--space-xl);
+    }
+    
+    .menu-burger {
+        margin-left: var(--space-lg);
+    }
+}
+
+/* === TABLET LANDSCAPE / SMALL DESKTOP (1024px+) === */
+@media (min-width: 1024px) {
+    .container-modern {
+        max-width: var(--container-lg);
+    }
+    
+    .race-details-specs {
+        /* grid-template-columns: repeat(2, 1fr); */
+        /* gap: var(--space-md); */
+    }
+}
+
+/* === DESKTOP (1280px+) === */
+@media (min-width: 1280px) {
+    .container-modern {
+        max-width: var(--container-xl);
+    }
+    
+    .hero-races {
+        padding: var(--space-3xl) var(--space-lg) var(--space-lg) 0;
+    }
+}
+
+/* === LARGE DESKTOP (1440px+) === */
+@media (min-width: 1440px) {
+    .container-modern {
+        max-width: var(--container-2xl);
+    }
+    
+    .section-spacing {
+        padding: 12rem 0;
+    }
+    
+    /* Padding ancora piÃ¹ generosi per schermi grandi */
+    section#race-details,
+    section#about,
+    body section:nth-of-type(odd):not(.hero-container):not(footer),
+    body section:nth-of-type(even):not(.hero-container):not(footer) {
+        padding: 12rem 0 !important;
+    }
+}
+
+/* === ULTRA WIDE (1920px+) === */
+@media (min-width: 1920px) {
+    .container-modern {
+        max-width: var(--container-3xl);
+    }
+    
+    .section-spacing-lg {
+        padding: 16rem 0;
+    }
+    
+    /* Padding ultra generosi per schermi ultra wide */
+    section#race-details,
+    section#about,
+    body section:nth-of-type(odd):not(.hero-container):not(footer),
+    body section:nth-of-type(even):not(.hero-container):not(footer) {
+        padding: 16rem 0 !important;
+    }
+}
+
+/* === LEGACY RESPONSIVE SUPPORT === */
+@media (max-width: 768px) {
+    .hero-content,
+    .hero-races {
+        width: 100%;
+    }
+    
+    .hero-races {
+        padding: var(--space-lg) var(--space-sm);
+    }
+    
+    .race-content {
+        padding: var(--space-lg);
+    }
+    
+    .menu-burger {
+        margin-left: var(--space-sm);
+    }
+
+    /* Footer responsive */
+    footer .col-lg-2 {
+        margin-bottom: var(--space-lg);
+    }
+    
+    footer .d-flex.justify-content-md-end {
+        justify-content: center !important;
+        margin-top: var(--space-sm);
+    }
+
+    /* Race details responsive */
+    .race-details-specs {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+
+    .race-details-title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .race-details-header {
+        height: 200px;
+    }
+    
+    /* Padding sezioni responsive per tablet */
+    section#race-details,
+    section#about,
+    body section:nth-of-type(odd):not(.hero-container):not(footer),
+    body section:nth-of-type(even):not(.hero-container):not(footer) {
+        padding: 6rem 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .race-details-content {
+        padding: var(--space-md);
+    }
+
+    .race-details-info {
+        padding: var(--space-md);
+    }
+
+    .race-details-title {
+        font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+    }
+    
+    /* Padding sezioni responsive per mobile */
+    section#race-details,
+    section#about,
+    body section:nth-of-type(odd):not(.hero-container):not(footer),
+    body section:nth-of-type(even):not(.hero-container):not(footer) {
+        padding: 4rem 0 !important;
+    }
+}
+
+/* === HIGH DPI DISPLAYS === */
+@media (min-resolution: 2dppx) {
+    .splash-logo,
+    .race-details-header {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .parallax-element {
+        transform: none !important;
+    }
+    
+    /* Eccezioni per componenti critici */
+    .menu-burger span,
+    .menu-overlay {
+        transition-duration: 0.3s !important;
+    }
+}

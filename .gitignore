@@ -1,0 +1,44 @@
+# File di sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# File temporanei
+*.tmp
+*.temp
+*~
+
+# File di backup
+*.bak
+*.backup
+*_backup.*
+
+# File di log
+*.log
+
+# File di configurazione locale
+.env
+.env.local
+config.local.*
+
+# Cartelle temporanee
+temp/
+tmp/
+cache/
+
+# File dell'editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (se usi Node.js)
+node_modules/
+npm-debug.log*
+
+# File di build
+dist/
+build/
+
+# File di cache
+.cache/

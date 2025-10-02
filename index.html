@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bologna Marathon 2026 - Bootstrap Version</title>
+    <meta name="description" content="Bologna Marathon 2026 - Esperienza cinematografica orizzontale. Naviga tra le gare con stile.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        /* Custom Font - Gloss And Bloom */
+        @font-face {
+            font-family: 'Gloss And Bloom';
+            src: url('font/Gloss_And_Bloom.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-logo splash-logo-animation" id="splashLogo">
+            <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="276.319px" height="294.961px" viewBox="0 0 276.319 294.961" enable-background="new 0 0 276.319 294.961"
+                 xml:space="preserve">
+                <path fill="#FFFFFF" d="M269.866,138.852c-0.324-0.548-0.679-1.065-1.019-1.595c-4.701-7.306-11.04-12.957-19.048-16.903
+                    c-1.96-0.966-4.006-1.807-6.12-2.553c-7.148-2.522-15.165-3.799-24.068-3.799c-13.254,0-25.068,2.759-35.438,8.282
+                    c-10.371,5.522-20.155,14.301-29.36,26.33c-4.664-11.661-11.478-20.345-20.433-26.051c-8.962-5.706-20.25-8.56-33.877-8.56
+                    c-13.744,0-25.677,2.794-35.799,8.376c-10.128,5.588-19.179,14.449-27.158,26.603v-28.538h-0.007v0.311
+                    c-0.525-0.021-1.041-0.079-1.572-0.079c-3.623,0-7.115,0.529-10.435,1.468c-8.643,2.445-16.029,7.837-21.026,15.031
+                    c-1.842,2.652-3.379,5.532-4.512,8.612v149.175h39.949v-79.525c0-15.834,0.485-26.695,1.468-32.586
+                    c0.983-5.89,2.699-10.861,5.156-14.91c3.806-6.258,8.956-11.164,15.467-14.728c6.499-3.56,13.679-5.339,21.534-5.339
+                    c12.763,0,21.754,4.173,26.969,12.52c5.214,8.346,7.825,23.321,7.825,44.916v89.652h40.316v-79.525
+                    c0-25.039,3.345-42.554,10.034-52.558c6.688-10.003,17.882-15.005,33.597-15.005c12.763,0,21.63,3.717,26.602,11.141
+                    c4.966,7.422,7.453,22.859,7.453,46.295v89.652h39.949v-105.85v-13.992c0-9.814-0.526-17.367-1.569-22.641
+                    C273.702,147.204,272.075,142.658,269.866,138.852z"/>
+                <path fill="#FFFFFF" d="M38.253,85.134c7.765-19.672,31.49-57.603,100.151-64.252c92.036-8.915,137.921,87.502,137.921,87.502
+                    S258.905,5.126,141.902,0C31.57,3.427,4.629,85.306-0.006,111.48C10.545,100.052,23.586,90.989,38.253,85.134z"/>
+                <path fill="#FFFFFF" d="M215.021,93.174c2.74-0.27,5.522-0.459,8.403-0.459c8.904,0,16.92,1.277,24.069,3.799
+                    c2.113,0.745,4.16,1.587,6.12,2.553c0.413,0.203,0.772,0.464,1.178,0.677c-2.745-6.362-7.715-14.466-13.521-20.898
+                    c-20.812-25.608-56.211-42.423-93.979-41.296c-36.333,1.085-65.515,18.467-79.12,43.467c-0.59,1.085-1.195,2.163-1.726,3.276
+                    c-1.943,4.073-3.51,8.318-4.608,12.724c0.414-0.645,0.872-1.265,1.309-1.898c13.715-22.222,38.921-37.283,69.711-38.302
+                    C165.059,55.751,195.373,70.33,215.021,93.174z"/>
+                <path fill="#FFFFFF" d="M144.191,73.205c-14.684,0-28.26,4.662-39.398,12.544c-0.002,0-0.004,0-0.006,0
+                    c-0.023,0.016-0.044,0.034-0.067,0.05c-0.081,0.057-0.164,0.111-0.245,0.168c0.006,0,0.013,0.001,0.02,0.001
+                    c-7.288,5.276-13.517,11.927-18.245,19.613c2.13-1.735,4.328-3.259,6.613-4.521c7.116-3.924,15.505-5.888,25.168-5.888
+                    c9.579,0,17.515,2.006,23.815,6.017c0.94,0.599,1.835,1.26,2.708,1.952c3.078,2.909,5.857,6.129,8.3,9.604
+                    c1.248,2.074,2.378,4.311,3.356,6.757c0.244-0.318,0.498-0.579,0.743-0.891c-0.018-0.032-0.037-0.063-0.054-0.096
+                    c6.181-7.808,12.719-13.619,19.64-17.304c5.535-2.948,11.659-4.769,18.363-5.478C182.396,81.901,164.311,73.205,144.191,73.205z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Fixed Header -->
+    <header class="navbar navbar-dark main-header fixed-top">
+        <div class="container-fluid px-3 px-lg-5">
+            <div class="d-flex align-items-center">
+                <!-- Logo -->
+                <img src="https://www.bolognamarathon.run//public/galleria_varius/loghi/4fa5d_logo_bologna_marathon_bianco.svg?v2" 
+                     alt="Bologna Marathon" 
+                     class="me-3" 
+                     style="height: 48px;">
+                
+                <!-- Desktop version -->
+                <div class="d-none d-md-block">
+                    <div class="font-bebas fs-4">
+                        <span class="gradient-text">THERMAL </span>BOLOGNA MARATHON
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="text-light small">2 MARZO 2026</div>
+                        <div id="countdown-desktop" class="countdown-text">
+                            <span id="countdown-days-desktop">000</span>g 
+                            <span id="countdown-hours-desktop">00</span>h 
+                            <span id="countdown-minutes-desktop">00</span>m 
+                            <span id="countdown-seconds-desktop">00</span>s
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile version -->
+                <div class="d-md-none">
+                    <div class="font-bebas fs-5">
+                        <span class="gradient-text">THERMAL BOLOGNA MARATHON</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="text-light small">2 MARZO 2026</div>
+                        <div id="countdown-mobile" class="countdown-text">
+                            <span id="countdown-days-mobile">000</span>g 
+                            <span id="countdown-hours-mobile">00</span>h 
+                            <span id="countdown-minutes-mobile">00</span>m 
+                            <span id="countdown-seconds-mobile">00</span>s
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-flex align-items-center">
+                <!-- Desktop Navigation -->
+                <nav class="d-none d-md-flex gap-4 me-3">
+                    <a href="#" class="nav-link-desktop active">HOME</a>
+                    <a href="maratona.html" class="nav-link-desktop">MARATONA</a>
+                    <a href="#" class="nav-link-desktop">30K PORTICI</a>
+                    <a href="#" class="nav-link-desktop">RUN TUNE UP</a>
+                </nav>
+
+                <!-- Menu Burger -->
+                <div class="menu-burger" id="menuBurger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Full Screen Menu Overlay -->
+    <nav id="menuOverlay" class="position-fixed top-0 start-0 w-100 h-100 menu-overlay" style="z-index: 40; transform: translateX(100%); transition: transform 0.5s ease-in-out;">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="text-center">
+                <a href="#info" class="d-block font-bebas text-light menu-link mb-4" style="font-size: 3rem; text-decoration: none;">INFO PERCORSO</a>
+                <a href="#news" class="d-block font-bebas text-light menu-link mb-4" style="font-size: 3rem; text-decoration: none;">NEWS</a>
+                <a href="#iscrizioni" class="d-block font-bebas text-light menu-link mb-4" style="font-size: 3rem; text-decoration: none;">ISCRIZIONI</a>
+                <a href="#contatti" class="d-block font-bebas text-light menu-link mb-4" style="font-size: 3rem; text-decoration: none;">CONTATTI</a>
+                <a href="#regolamento" class="d-block font-bebas text-light menu-link mb-4" style="font-size: 3rem; text-decoration: none;">REGOLAMENTO</a>
+                
+                <!-- Social Links -->
+                <div class="d-flex justify-content-center gap-3 pt-4">
+                    <a href="#" class="text-muted">
+                        <i class="fab fa-facebook fs-2"></i>
+                    </a>
+                    <a href="#" class="text-muted">
+                        <i class="fab fa-instagram fs-2"></i>
+                    </a>
+                    <a href="#" class="text-muted">
+                        <i class="fab fa-youtube fs-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <div class="row g-0 h-100">
+            <!-- Left: Main Content -->
+            <div class="col-lg-6 hero-content">
+                <div class="hero-content-inner">
+                    <div class="hero-badge">
+                        <i class="fas fa-calendar-alt"></i> 2 Marzo 2026
+                    </div>
+                    
+                    <h1 class="hero-title font-bebas">
+                        THERMAL<br>BOLOGNA MARATHON
+                    </h1>
+                    
+                    <h2 class="hero-subtitle accent-title">
+                        Corri Attraverso la Storia
+                    </h2>
+                    
+                    <p class="hero-description">
+                        Tre percorsi unici nel cuore di Bologna. Scegli la tua sfida e vivi un'esperienza 
+                        indimenticabile tra storia, cultura e sport.
+                    </p>
+                    
+                    <a href="#gare" class="cta-primary">
+                        <i class="fas fa-play"></i>
+                        Scopri le Gare
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Race Selection Cards -->
+            <div class="col-lg-6 hero-races">
+                
+                <!-- Marathon Card -->
+                <div class="race-card-mini marathon" onclick="selectRace('marathon')">
+                    <div class="slide race-slide marathon-slide">
+                        <div class="race-content">
+                            <div class="race-number font-bebas" style="color: var(--marathon-blue);">01</div>
+                            <div class="race-category" style="background: rgba(35,168,235,0.2); border-color: var(--marathon-blue); color: var(--marathon-blue);">
+                                GARA REGINA
+                            </div>
+                            <h2 class="race-title font-bebas">MARATONA</h2>
+                            <p class="race-distance font-bebas" style="color: var(--marathon-blue);">42.195 KM</p>
+                            <p class="race-description">
+                                La sfida definitiva attraverso tutti i monumenti storici di Bologna. 
+                                Dai Due Torri al Santuario di San Luca, un percorso che ti porterà 
+                                attraverso secoli di storia e cultura.
+                            </p>
+                            
+                            <div class="race-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(35,168,235,0.2);">
+                                        <i class="fas fa-clock" style="color: var(--marathon-blue);"></i>
+                                    </div>
+                                    <span>Tempo limite: 6 ore</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(35,168,235,0.2);">
+                                        <i class="fas fa-euro-sign" style="color: var(--marathon-blue);"></i>
+                                    </div>
+                                    <span>Quota: €65</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(35,168,235,0.2);">
+                                        <i class="fas fa-medal" style="color: var(--marathon-blue);"></i>
+                                    </div>
+                                    <span>Medaglia finisher</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(35,168,235,0.2);">
+                                        <i class="fas fa-tshirt" style="color: var(--marathon-blue);"></i>
+                                    </div>
+                                    <span>T-shirt tecnica</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <button class="cta-horizontal" style="background: var(--marathon-blue);" onclick="registerRace('marathon')">
+                                    ISCRIVITI ALLA MARATONA
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 30K Portici Card -->
+                <div class="race-card-mini portici" onclick="selectRace('30k')">
+                    <div class="slide race-slide portici-slide">
+                        <div class="race-content">
+                            <div class="race-number font-bebas" style="color: var(--portici-pink);">02</div>
+                            <div class="race-category" style="background: rgba(220,51,94,0.2); border-color: var(--portici-pink); color: var(--portici-pink);">
+                                PATRIMONIO UNESCO
+                            </div>
+                            <h2 class="race-title font-bebas">30K DEI PORTICI</h2>
+                            <p class="race-distance font-bebas" style="color: var(--portici-pink);">30 KM</p>
+                            <p class="race-description">
+                                Un percorso unico al mondo sotto i portici patrimonio UNESCO di Bologna. 
+                                Corri attraverso 30 chilometri di storia architettonica e bellezza 
+                                senza precedenti.
+                            </p>
+                            
+                            <div class="race-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(220,51,94,0.2);">
+                                        <i class="fas fa-clock" style="color: var(--portici-pink);"></i>
+                                    </div>
+                                    <span>Tempo limite: 4 ore</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(220,51,94,0.2);">
+                                        <i class="fas fa-euro-sign" style="color: var(--portici-pink);"></i>
+                                    </div>
+                                    <span>Quota: €45</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(220,51,94,0.2);">
+                                        <i class="fas fa-archway" style="color: var(--portici-pink);"></i>
+                                    </div>
+                                    <span>Portici UNESCO</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(220,51,94,0.2);">
+                                        <i class="fas fa-certificate" style="color: var(--portici-pink);"></i>
+                                    </div>
+                                    <span>Esperienza unica</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <button class="cta-horizontal" style="background: var(--portici-pink);" onclick="registerRace('30k')">
+                                    ISCRIVITI AI 30K PORTICI
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Run Tune Up Card -->
+                <div class="race-card-mini runtune" onclick="selectRace('21k')">
+                    <div class="slide race-slide runtune-slide">
+                        <div class="race-content">
+                            <div class="race-number font-bebas" style="color: var(--runtune-green);">03</div>
+                            <div class="race-category" style="background: rgba(203,223,68,0.2); border-color: var(--runtune-green); color: var(--runtune-green);">
+                                ACCESSIBILE A TUTTI
+                            </div>
+                            <h2 class="race-title font-bebas">RUN TUNE UP</h2>
+                            <p class="race-distance font-bebas" style="color: var(--runtune-green);">21.097 KM</p>
+                            <p class="race-description">
+                                La mezza maratona nel cuore della città. Perfetta per chi vuole vivere 
+                                l'esperienza Bologna Marathon in una distanza più accessibile e 
+                                coinvolgente.
+                            </p>
+                            
+                            <div class="race-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(203,223,68,0.2);">
+                                        <i class="fas fa-clock" style="color: var(--runtune-green);"></i>
+                                    </div>
+                                    <span>Tempo limite: 3 ore</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(203,223,68,0.2);">
+                                        <i class="fas fa-euro-sign" style="color: var(--runtune-green);"></i>
+                                    </div>
+                                    <span>Quota: €35</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(203,223,68,0.2);">
+                                        <i class="fas fa-heart" style="color: var(--runtune-green);"></i>
+                                    </div>
+                                    <span>Per tutti i livelli</span>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon" style="background: rgba(203,223,68,0.2);">
+                                        <i class="fas fa-city" style="color: var(--runtune-green);"></i>
+                                    </div>
+                                    <span>Centro storico</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <button class="cta-horizontal" style="background: var(--runtune-green); color: black;" onclick="registerRace('21k')">
+                                    ISCRIVITI AL RUN TUNE UP
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row for 5km and Kids cards -->
+                <div class="row g-2 mt-2">
+                    <!-- 5km Card -->
+                    <div class="col-6">
+                        <div class="race-card-mini cityrun" onclick="selectRace('5km')">
+                            <div class="slide race-slide cityrun-slide">
+                                <div class="race-content">
+                                    <div class="race-number font-bebas" style="color: #28a745;">04</div>
+                                    <div class="race-category" style="background: rgba(40,167,69,0.2); border-color: #28a745; color: #28a745;">
+                                        SOLIDARIETÀ
+                                    </div>
+                                    <h2 class="race-title font-bebas">5KM CITY RUN</h2>
+                                    <p class="race-distance font-bebas" style="color: #28a745;">5 KM</p>
+                                    <p class="race-description">
+                                        Corsa di solidarietà nel centro storico di Bologna. 
+                                        Unisciti alla grande squadra del Terzo Settore.
+                                    </p>
+                                    
+                                    <div class="race-features">
+                                        <div class="feature-item">
+                                            <div class="feature-icon" style="background: rgba(40,167,69,0.2);">
+                                                <i class="fas fa-heart" style="color: #28a745;"></i>
+                                            </div>
+                                            <span>Solidarietà</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <div class="feature-icon" style="background: rgba(40,167,69,0.2);">
+                                                <i class="fas fa-users" style="color: #28a745;"></i>
+                                            </div>
+                                            <span>Per tutti</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <button class="cta-horizontal" style="background: #28a745;" onclick="registerRace('5km')">
+                                            ISCRIVITI 5KM
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kids Card -->
+                    <div class="col-6">
+                        <div class="race-card-mini kids" onclick="selectRace('kids')">
+                            <div class="slide race-slide kids-slide">
+                                <div class="race-content">
+                                    <div class="race-number font-bebas" style="color: #fd7e14;">05</div>
+                                    <div class="race-category" style="background: rgba(253,126,20,0.2); border-color: #fd7e14; color: #fd7e14;">
+                                        BAMBINI
+                                    </div>
+                                    <h2 class="race-title font-bebas">KIDS RUN</h2>
+                                    <p class="race-distance font-bebas" style="color: #fd7e14;">1 KM</p>
+                                    <p class="race-description">
+                                        La corsa dedicata ai più piccoli. Un'esperienza 
+                                        divertente e sicura per i bambini.
+                                    </p>
+                                    
+                                    <div class="race-features">
+                                        <div class="feature-item">
+                                            <div class="feature-icon" style="background: rgba(253,126,20,0.2);">
+                                                <i class="fas fa-child" style="color: #fd7e14;"></i>
+                                            </div>
+                                            <span>Bambini</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <div class="feature-icon" style="background: rgba(253,126,20,0.2);">
+                                                <i class="fas fa-smile" style="color: #fd7e14;"></i>
+                                            </div>
+                                            <span>Divertimento</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <button class="cta-horizontal" style="background: #fd7e14;" onclick="registerRace('kids')">
+                                            ISCRIVI BAMBINO
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section with Parallax -->
+    <section id="about" class="py-5 position-relative overflow-hidden">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="font-bebas parallax-element" style="font-size: clamp(3rem, 7vw, 5rem); margin-bottom: 2rem;">
+                        DOVE LO SPORT INCONTRA LA <span class="light-glow">STORIA</span>
+                    </h2>
+                    <p class="fs-5 mb-4 text-light" style="line-height: 1.6;">
+                        La Maratona di Bologna è un grande evento dove lo sport si fonde con la storia, la cultura, l'arte, la musica e il buon cibo di una delle città più antiche d'Europa.
+                    </p>
+                    <p class="fs-6 mb-4 text-muted">
+                        Tre giorni di festa in Piazza Maggiore, una delle piazze più belle d'Italia, offrendo a tutti i partecipanti diverse opportunità per visitare e scoprire una città unica.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="d-flex align-items-center gap-2 bg-light bg-opacity-10 px-3 py-2 rounded-pill">
+                            <i class="fas fa-running text-info"></i>
+                            <span class="fw-semibold">10.000+ Runner</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 bg-light bg-opacity-10 px-3 py-2 rounded-pill">
+                            <i class="fas fa-globe text-info"></i>
+                            <span class="fw-semibold">50+ Nazioni</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 bg-light bg-opacity-10 px-3 py-2 rounded-pill">
+                            <i class="fas fa-music text-info"></i>
+                            <span class="fw-semibold">3 Giorni di Eventi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 position-relative d-flex align-items-center" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="position-relative w-100" style="z-index: 10; height: 400px;">
+                        <img src="img/maratona/primo classificato.jpg" 
+                             alt="Primo Classificato Bologna Marathon" 
+                             class="w-100 h-100 rounded-3 shadow-lg"
+                             style="object-fit: cover; object-position: center;">
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="position-absolute top-0 end-0 translate-middle-y" 
+                         style="width: 8rem; height: 8rem; background: #0d6efd; border-radius: 50%; filter: blur(60px); opacity: 0.2; z-index: -1;"></div>
+                    <div class="position-absolute bottom-0 start-0 translate-middle-y" 
+                         style="width: 10rem; height: 10rem; background: #fd7e14; border-radius: 50%; filter: blur(60px); opacity: 0.2; z-index: -1;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Race Details Section -->
+    <section id="race-details" class="race-details-section py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="font-bebas parallax-element" style="font-size: clamp(3rem, 7vw, 5rem); margin-bottom: 2rem;">
+                        DETTAGLI DELLE <span class="light-glow">GARE</span>
+                    </h2>
+                    <p class="fs-5 text-light" style="line-height: 1.6; max-width: 800px; margin: 0 auto;">
+                        Scopri tutte le informazioni dettagliate sui nostri tre percorsi unici. Ogni gara offre un'esperienza diversa attraverso la storia e la bellezza di Bologna.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Marathon Details -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <article class="race-details-card marathon h-100">
+                        <div class="race-details-header marathon-slide">
+                            <div class="race-details-content">
+                                <span class="race-details-badge">GARA REGINA</span>
+                                <h3 class="race-details-title font-bebas">MARATONA</h3>
+                                <p class="race-details-distance font-bebas">42.195 KM</p>
+                            </div>
+                        </div>
+                        <div class="race-details-info">
+                            <p class="race-details-description">
+                                La sfida definitiva attraverso tutti i monumenti storici di Bologna. Un percorso che unisce sport, storia e cultura in un'esperienza indimenticabile.
+                            </p>
+                            
+                            <div class="race-details-specs">
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Tempo Limite</h4>
+                                        <p>6 ore</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-euro-sign"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Quota Iscrizione</h4>
+                                        <p>€65</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-route"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Difficoltà</h4>
+                                        <p>Avanzata</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-medal"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Ricompense</h4>
+                                        <p>Medaglia + T-shirt</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="cta-horizontal" style="background: var(--marathon-blue);" onclick="registerRace('marathon')">
+                                ISCRIVITI ALLA MARATONA
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 30K Portici Details -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <article class="race-details-card portici h-100">
+                        <div class="race-details-header portici-slide">
+                            <div class="race-details-content">
+                                <span class="race-details-badge">PATRIMONIO UNESCO</span>
+                                <h3 class="race-details-title font-bebas">30K PORTICI</h3>
+                                <p class="race-details-distance font-bebas">30 KM</p>
+                            </div>
+                        </div>
+                        <div class="race-details-info">
+                            <p class="race-details-description">
+                                Un percorso unico al mondo sotto i portici patrimonio UNESCO di Bologna. Corri attraverso la storia architettonica più affascinante d'Europa.
+                            </p>
+                            
+                            <div class="race-details-specs">
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Tempo Limite</h4>
+                                        <p>4 ore</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-euro-sign"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Quota Iscrizione</h4>
+                                        <p>€45</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-route"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Difficoltà</h4>
+                                        <p>Intermedia</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-archway"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Caratteristica</h4>
+                                        <p>Portici UNESCO</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="cta-horizontal" style="background: var(--portici-pink);" onclick="registerRace('portici')">
+                                ISCRIVITI AI 30K PORTICI
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Run Tune Up Details -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <article class="race-details-card runtune h-100">
+                        <div class="race-details-header runtune-slide">
+                            <div class="race-details-content">
+                                <span class="race-details-badge">ACCESSIBILE A TUTTI</span>
+                                <h3 class="race-details-title font-bebas">RUN TUNE UP</h3>
+                                <p class="race-details-distance font-bebas">21.097 KM</p>
+                            </div>
+                        </div>
+                        <div class="race-details-info">
+                            <p class="race-details-description">
+                                La mezza maratona nel cuore della città. Perfetta per chi vuole vivere l'esperienza Bologna Marathon in una distanza più accessibile.
+                            </p>
+                            
+                            <div class="race-details-specs">
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Tempo Limite</h4>
+                                        <p>3 ore</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-euro-sign"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Quota Iscrizione</h4>
+                                        <p>€35</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-route"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Difficoltà</h4>
+                                        <p>Principiante</p>
+                                    </div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="spec-content">
+                                        <h4>Caratteristica</h4>
+                                        <p>Per tutti i livelli</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="cta-horizontal" style="background: var(--runtune-green); color: black;" onclick="registerRace('runtune')">
+                                ISCRIVITI AL RUN TUNE UP
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sponsor Section -->
+    <section class="sponsor-section">
+        <div class="sponsor-title">
+            <h2>I NOSTRI <span class="light-glow">SPONSOR</span></h2>
+            <p class="sponsor-subtitle">
+                Grazie ai nostri partner che rendono possibile questo straordinario evento sportivo
+            </p>
+        </div>
+
+        <!-- Riga 1: Technical, Title, Main, Official Water -->
+        <div class="sponsor-swiper-container">
+            <div class="sponsor-row-label">SPONSOR PRINCIPALI</div>
+            <div class="swiper sponsor-swiper sponsor-swiper-1">
+                <div class="swiper-wrapper">
+
+                    <!-- Title Sponsor -->
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/title sponsor/termal group.png" alt="Thermal Group" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Thermal Group</div>
+                    </div>
+                    <!-- Technical Sponsor -->
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/thecnical sponsor/joma.jpeg" alt="Joma" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Joma</div>
+                    </div>                    
+                    <!-- Main Sponsor -->
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/main sponsor/pellicon.png" alt="Pellicon" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Pellicon</div>
+                    </div>
+                    <!-- Official Water -->
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/official whater/culligan.png" alt="Culligan" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Culligan</div>
+                    </div>
+                    <!-- Official Beer -->
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/official beer/birra poretti.png" alt="Birra Poretti" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Birra Poretti</div>
+                    </div>
+                    <!-- Official Car -->
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/official car/hyundai.jpg" alt="Hyundai" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Hyundai</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 2: Sponsor -->
+        <div class="sponsor-swiper-container">
+            <div class="sponsor-row-label">SPONSOR</div>
+            <div class="swiper sponsor-swiper sponsor-swiper-2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor/cer_medical.png" alt="CER Medical" onerror="this.style.display='none'">
+                        <div class="sponsor-name">CER Medical</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor/dicloreum.jpeg" alt="Dicloreum" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Dicloreum</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor/gym_to_go.png" alt="Gym To Go" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Gym To Go</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor/master_aid_sport.png" alt="Master Aid Sport" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Master Aid Sport</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor/nh_hotels_e_resort.png" alt="NH Hotels" onerror="this.style.display='none'">
+                        <div class="sponsor-name">NH Hotels</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor/t_per_cambia_il_movimento.png" alt="T Per Cambia il Movimento" onerror="this.style.display='none'">
+                        <div class="sponsor-name">T Per Cambia il Movimento</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor/tigota.png" alt="Tigota" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Tigota</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor/tuday_conad.png" alt="Tuday Conad" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Tuday Conad</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riga 3: Sponsor 2 -->
+        <div class="sponsor-swiper-container">
+            <div class="sponsor-row-label">SPONSOR TECNICI</div>
+            <div class="swiper sponsor-swiper sponsor-swiper-3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/adventure_agency.jpg" alt="Adventure Agency" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Adventure Agency</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/artigianquality.png" alt="Artigianquality" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Artigianquality</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/associacione_pianificatori_bologna_e_provincia.png" alt="Associazione Pianificatori Bologna" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Associazione Pianificatori Bologna</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/dole.png" alt="Dole" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Dole</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/franzini.png" alt="Franzini" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Franzini</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/fruits_production_twists.png" alt="Fruits Production Twists" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Fruits Production Twists</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/frulla.png" alt="Frulla" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Frulla</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/marazzi.jpg" alt="Marazzi" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Marazzi</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/mattei_plast.png" alt="Mattei Plast" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Mattei Plast</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/moca.png" alt="Moca" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Moca</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/parmigiano_reggiano.jpeg" alt="Parmigiano Reggiano" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Parmigiano Reggiano</div>
+                    </div>
+                    <div class="swiper-slide sponsor-slide">
+                        <img src="sponsor/sponsor 2/sticker_mule.jpg" alt="Sticker Mule" onerror="this.style.display='none'">
+                        <div class="sponsor-name">Sticker Mule</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-5 mt-auto">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Logo e Info Principali -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="mb-4">
+                        <img src="https://www.bolognamarathon.run//public/galleria_varius/loghi/4fa5d_logo_bologna_marathon_bianco.svg?v2" 
+                             alt="Bologna Marathon" 
+                             style="height: 60px;">
+                    </div>
+                    <h5 class="font-bebas gradient-text mb-3">THERMAL BOLOGNA MARATHON</h5>
+                    <p class="text-muted mb-3">
+                        Tre percorsi unici nel cuore di Bologna. Un'esperienza indimenticabile tra storia, cultura e sport.
+                    </p>
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <i class="fas fa-calendar-alt text-info"></i>
+                        <span class="text-light">2 Marzo 2026</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-info"></i>
+                        <span class="text-light">Bologna, Italia</span>
+                    </div>
+                </div>
+
+                <!-- Links Utili -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white font-bebas mb-3">GARE</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="text-muted text-decoration-none hover-link">
+                                <span style="color: var(--marathon-blue);">●</span> Maratona 42K
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-muted text-decoration-none hover-link">
+                                <span style="color: var(--portici-pink);">●</span> 30K Portici
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-muted text-decoration-none hover-link">
+                                <span style="color: var(--runtune-green);">●</span> Run Tune Up 21K
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-muted text-decoration-none hover-link">
+                                <span style="color: #28a745;">●</span> 5km City Run
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-muted text-decoration-none hover-link">
+                                <span style="color: #fd7e14;">●</span> Kids Run
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Informazioni -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white font-bebas mb-3">INFORMAZIONI</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-link">Info Percorso</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-link">Regolamento</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-link">Iscrizioni</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-link">News</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-link">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contatti e Social -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white font-bebas mb-3">CONTATTI</h6>
+                    <div class="mb-3">
+                        <div class="d-flex align-items-start gap-2 mb-2">
+                            <i class="fas fa-envelope text-info mt-1"></i>
+                            <div>
+                                <span class="text-muted">info@bolognamarathon.run</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start gap-2 mb-2">
+                            <i class="fas fa-phone text-info mt-1"></i>
+                            <div>
+                                <span class="text-muted">+39 051 123 4567</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="fas fa-map-marker-alt text-info mt-1"></i>
+                            <div>
+                                <span class="text-muted">Via Indipendenza, 8<br>40121 Bologna (BO)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <h6 class="text-white font-bebas mb-3">SEGUICI</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-muted hover-social" title="Facebook">
+                            <i class="fab fa-facebook fs-4"></i>
+                        </a>
+                        <a href="#" class="text-muted hover-social" title="Instagram">
+                            <i class="fab fa-instagram fs-4"></i>
+                        </a>
+                        <a href="#" class="text-muted hover-social" title="YouTube">
+                            <i class="fab fa-youtube fs-4"></i>
+                        </a>
+                        <a href="#" class="text-muted hover-social" title="Twitter">
+                            <i class="fab fa-twitter fs-4"></i>
+                        </a>
+                        <a href="#" class="text-muted hover-social" title="Strava">
+                            <i class="fab fa-strava fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Separatore -->
+            <hr class="border-secondary my-4">
+
+            <!-- Copyright e Links Legali -->
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">
+                        © 2024 Bologna Marathon. Tutti i diritti riservati.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex flex-wrap justify-content-md-end gap-3">
+                        <a href="#" class="text-muted text-decoration-none hover-link small">Privacy Policy</a>
+                        <a href="#" class="text-muted text-decoration-none hover-link small">Cookie Policy</a>
+                        <a href="#" class="text-muted text-decoration-none hover-link small">Termini di Servizio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
